@@ -1,6 +1,5 @@
-package ru.pobopo.model.weatherapi;
+package ru.pobopo.weather.model.weatherapi;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Data;

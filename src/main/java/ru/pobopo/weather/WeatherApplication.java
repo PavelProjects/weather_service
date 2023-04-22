@@ -1,4 +1,4 @@
-package ru.pobopo;
+package ru.pobopo.weather;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package ru.pobopo.exception;
+package ru.pobopo.weather.exception;
 
 public class ValidationException extends Exception{
     private final String message;

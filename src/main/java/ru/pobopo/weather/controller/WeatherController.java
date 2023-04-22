@@ -1,4 +1,4 @@
-package ru.pobopo.controller;
+package ru.pobopo.weather.controller;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.pobopo.exception.ValidationException;
-import ru.pobopo.model.WeatherResponse;
-import ru.pobopo.service.WeatherService;
+import ru.pobopo.weather.exception.ValidationException;
+import ru.pobopo.weather.model.WeatherResponse;
+import ru.pobopo.weather.service.WeatherService;
 
 @RestController
 @RequestMapping("/v1")

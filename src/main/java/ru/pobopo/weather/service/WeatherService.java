@@ -1,4 +1,4 @@
-package ru.pobopo.service;
+package ru.pobopo.weather.service;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -14,20 +14,18 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
-import ru.pobopo.exception.ValidationException;
-import ru.pobopo.model.WeatherResponse;
-import ru.pobopo.model.weatherapi.ForecastDay;
-import ru.pobopo.model.weatherapi.TempHour;
-import ru.pobopo.model.weatherapi.WeatherApiResponse;
-import ru.pobopo.util.ParameterStringBuilder;
+import ru.pobopo.weather.exception.ValidationException;
+import ru.pobopo.weather.model.WeatherResponse;
+import ru.pobopo.weather.model.weatherapi.ForecastDay;
+import ru.pobopo.weather.model.weatherapi.TempHour;
+import ru.pobopo.weather.model.weatherapi.WeatherApiResponse;
+import ru.pobopo.weather.util.ParameterStringBuilder;
 
 @Slf4j
 @Service

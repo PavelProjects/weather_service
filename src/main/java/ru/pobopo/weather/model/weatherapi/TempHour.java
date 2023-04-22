@@ -1,4 +1,4 @@
-package ru.pobopo.model.weatherapi;
+package ru.pobopo.weather.model.weatherapi;
 
 import java.time.LocalDateTime;
 import lombok.Data;

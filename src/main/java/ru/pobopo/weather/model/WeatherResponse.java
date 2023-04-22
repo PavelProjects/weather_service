@@ -1,4 +1,4 @@
-package ru.pobopo.model;
+package ru.pobopo.weather.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

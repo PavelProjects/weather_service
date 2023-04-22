@@ -1,4 +1,4 @@
-package ru.pobopo.util;
+package ru.pobopo.weather.util;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
