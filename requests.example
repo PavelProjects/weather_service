@@ -1,2 +1,2 @@
-curl -X 'GET' 'http://localhost:8080/v1/current?city=moscow'
-curl -X 'GET' 'http://localhost:8080/v1/forecast?city=moscow&dt=2023-04-03T02:10'
+curl -X 'GET' "http://localhost:$PORT/v1/current?city=moscow"
+curl -X 'GET' "http://localhost:$PORT/v1/forecast?city=moscow&dt=2023-05-04T02:10"

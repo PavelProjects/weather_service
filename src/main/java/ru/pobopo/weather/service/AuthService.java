@@ -11,6 +11,7 @@ import ru.pobopo.weather.grpc.Credits;
 @Component
 public class AuthService {
     private final ManagedChannel channel;
+    private final boolean securityDisabled;
 
     public AuthService() {
         String host = System.getenv("AUTH_HOST");
@@ -22,12 +23,21 @@ public class AuthService {
             .forAddress(host, Integer.parseInt(port))
             .usePlaintext()
             .build();
+        this.securityDisabled = isSecurityDisabled();
     }
 
     public boolean authUser(String login, String password) {
+        if (isSecurityDisabled()) {
+            return true;
+        }
         AuthServiceGrpc.AuthServiceBlockingStub stub = AuthServiceGrpc.newBlockingStub(channel);
         Credits credits = Credits.newBuilder().setLogin(login).setPassword(password).build();
         BoolValue result = stub.authUser(credits);
         return result.getValue();
+    }
+
+    private boolean isSecurityDisabled() {
+        String value = System.getenv("SECURITY_DISABLED");
+        return StringUtils.isNotBlank(value) && Boolean.parseBoolean(value);
     }
 }
